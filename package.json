@@ -1,0 +1,25 @@
+{
+  "name": "typescript-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/request": "^2.48.1",
+    "@types/request-promise": "^4.1.44",
+    "jest": "^24.8.0",
+    "jest-cucumber": "^2.0.11",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-watch": "test --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
