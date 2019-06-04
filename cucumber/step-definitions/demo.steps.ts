@@ -1,5 +1,6 @@
 import { loadFeature, defineFeature } from "jest-cucumber";
 import { thisIsASharedStep, anotherSharedStepWithParameter } from "./shared_steps";
+import * as ImpCountry from "../models/Country";
 
 const feature = loadFeature("./cucumber/features/demo.feature");
 
@@ -101,4 +102,30 @@ defineFeature(feature, (test) => {
 
         anotherSharedStepWithParameter(when);
     })
+
+    test('Third scenario step definition table', ({ given, when, then }) => {
+        var countryArray : ImpCountry.country[] = new Array();
+        given('My country list currently looks as follows:', (table) => {
+            table.forEach((row:any)=>{
+                countryArray.push(new ImpCountry.country(row.countryNo,row.countryName,row.countrycapital));
+            })
+        });
+
+        when('I add a following country:', (table) => {
+            table.forEach((row:any)=>{
+                countryArray.push(new ImpCountry.country(row.countryNo,row.countryName,row.countrycapital));
+            })      
+        });
+
+        then('I should see the following country list:', (table) => {
+            expect(countryArray.length).toBe(table.length);
+
+            table.forEach((row:any, index:any)=>{
+                console.log(`${index} : ${JSON.stringify(row)}`);
+                expect(countryArray[index].countryNo).toEqual(row.countryNo);
+                expect(countryArray[index].countryName).toBe(row.countryName);
+                expect(countryArray[index].countrycapital).toBe(row.countrycapital);
+            })
+        });
+    });
 });
