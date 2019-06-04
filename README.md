@@ -103,7 +103,7 @@ Folder structure
 	         demo.steps.ts
 			
 Create a feature file eg. demo.feature and add a scenario in it 
-	
+
 	eg. 
 		Feature: Demo Feature
 
@@ -114,7 +114,7 @@ Create a feature file eg. demo.feature and add a scenario in it
 			When To check if When step is called and print something
 			Then To check if Then step is called and print something
 
-			
+
 Create a step file named "demo.steps.ts" and add the following 
 
 	import { loadFeature, defineFeature } from "jest-cucumber";
