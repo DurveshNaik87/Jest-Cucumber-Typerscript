@@ -1,9 +1,16 @@
 import { loadFeature, defineFeature } from "jest-cucumber";
-import { thisIsASharedStep, anotherSharedStepWithParameter } from "./shared_steps";
+import { anotherSharedStepWithParameter } from "./shared_steps";
 
 const feature = loadFeature("./cucumber/features/demo.feature");
 
 let add = (a: number, b: number): number => a + b;
+
+//To share steps within the same feature file
+const thisIsASharedStep = (given: (regex: RegExp, params: () => void) => void) => {
+    given(/This is a Shared Step/, () => {
+        console.log("This is an example of a shared step.....");
+    });
+}
 
 defineFeature(feature, (test) => {
 
@@ -38,11 +45,11 @@ defineFeature(feature, (test) => {
             console.log(`Addition of ${n1} and ${n2} : ${add(n1, n1)}`);
         });
 
-        and(/^I multiply the following three nos (.*), (.*) and (.*)$/, (n1: number, n2: number, n3: number) => {
+        and(/^I multiply the following three nos (\d+), (\d+) and (\d+)$/, (n1, n2, n3) => {
             console.log(`Multiplication of ${n1} and ${n2} : ${n1 * n2}`)
         });
 
-        then(/^I take in the string '(.*)' and print it to the console$/, (text: string) => {
+        then(/^I take in the string '(.*)' and print it to the console$/, (text) => {
             console.log(text);
         });
 
