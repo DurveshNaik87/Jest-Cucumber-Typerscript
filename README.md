@@ -1,15 +1,20 @@
 # typescript-jest
 
-Jest and Jest-Cucumber with Typescript
+## Jest and Jest-Cucumber with Typescript
 
-Jest Setup
-
+#### Jest Setup
 Install the following dependencies
-	1. jest
-	2. typescript
-	3. @types/jest
-	4. ts-jest : 
-			Typescript preprocessor which allows jest to transpile Typescript on the fly and have source-map support built-in.
+
+ 	jest
+ 	
+ 	@types/jest
+ 	
+ 	typescript
+ 	
+ 	ts-jest
+ 
+ ts-jest : Typescript preprocessor which allows jest to transpile Typescript on the fly and have source-map support built-in.
+	
 
 Generate the tsconfig with default configuration
 	tsc --init
