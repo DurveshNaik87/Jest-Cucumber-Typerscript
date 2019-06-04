@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1559315883460" clover="3.2.0">
-  <project timestamp="1559315883461" name="All files">
-    <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="2" elements="20" coveredelements="14" complexity="0" loc="12" ncloc="12" packages="1" files="3" classes="3"/>
-    <file name="app.ts" path="C:\Oreo\ts-jest\src\app.ts">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="3" count="2" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-    </file>
-    <file name="index.ts" path="C:\Oreo\ts-jest\src\index.ts">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-    </file>
-    <file name="math.ts" path="C:\Oreo\ts-jest\src\math.ts">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-    </file>
+<coverage generated="1559577967940" clover="3.2.0">
+  <project timestamp="1559577967940" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="12" elements="30" coveredelements="30" complexity="0" loc="18" ncloc="18" packages="2" files="4" classes="4"/>
+    <package name="cucumber.step-definitions">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="shared_steps.ts" path="C:\Oreo\typescript-jest\cucumber\step-definitions\shared_steps.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <file name="app.ts" path="C:\Oreo\typescript-jest\src\app.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Oreo\typescript-jest\src\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="math.ts" path="C:\Oreo\typescript-jest\src\math.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

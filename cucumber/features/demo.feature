@@ -43,11 +43,26 @@ Feature: Demo Feature
             | Holiday   | Date   |
             | <holiday> | <date> |
         Examples:
-            | holiday          | date        |
-            | New Years        | 01 Jan 2019 |
-            # | Maharashtra Day  | 01 May 2019 |
-            # | Independence Day | 15 Aug 2019 |
+            | holiday   | date        |
+            | New Years | 01 Jan 2019 |
+    # | Maharashtra Day  | 01 May 2019 |
+    # | Independence Day | 15 Aug 2019 |
 
     Scenario: To check if steps can be shared among other scenarios
         Given This is a Shared Step
         When Another shared step with parameter 'shared step example - One'
+
+
+    Scenario: Third scenario step definition table
+        Given My country list currently looks as follows:
+            | countryNo | countryName | countrycapital |
+            | 1         | India       | Delhi          |
+            | 2         | SriLanka    | colombo        |
+        When I add a following country:
+            | countryNo | countryName | countrycapital |
+            | 3         | Nepal       | Kathmandu      |
+        Then I should see the following country list:
+            | countryNo | countryName | countrycapital |
+            | 1         | India       | Delhi          |
+            | 2         | SriLanka    | colombo        |
+            | 3         | Nepal       | Kathmandu      |
