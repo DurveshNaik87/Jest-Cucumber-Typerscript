@@ -17,6 +17,8 @@
   },
   "scripts": {
     "test": "jest",
+    "unit": "jest ./unit-tests/",
+    "features":"jest ./cucumber/step-definitions",
     "test-watch": "test --watch"
   },
   "keywords": [],
