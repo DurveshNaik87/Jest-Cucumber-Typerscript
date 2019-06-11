@@ -66,7 +66,7 @@ describe("Testing Async Code", () => {
     test("async test 7", async () => {
         expect.assertions(1);
         try {
-            await request(options);
+            await request(invalidOptions);
         } catch (e) {
             expect(e.toString()).toEqual(errorMessage);
         }

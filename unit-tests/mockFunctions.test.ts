@@ -52,7 +52,7 @@ test("mock return values - example", () => {
     console.log(`Mock Calls : ${filterTestFn.mock.calls}`);
 })
 
-test("call todos api - with mocking", async () => {
+test.skip("call todos api - with mocking", async () => {
     expect.assertions(1);
     const result = {
         "userId": 55,
@@ -67,7 +67,8 @@ test("call todos api - with mocking", async () => {
 
 })
 
-test("call todos api - without mocking", async () => {
+test.skip("call todos api - without mocking", async () => {
     let data = await Todos.all();
-    console.log(JSON.stringify(data, null, 4));
+    //console.log(JSON.stringify(data, null, 4));
+    expect(data).not.toBe(undefined);
 })
