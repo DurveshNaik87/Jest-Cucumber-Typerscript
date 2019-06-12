@@ -1,0 +1,33 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:  
+  build:    
+    ignore:
+        - /feature-.*/
+
+    working_directory: ~/typescript-jest
+
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:8.10    
+    steps:
+      - checkout        
+                
+      - run:
+          name: Install npm dependencies          
+          command: npm install 
+
+      - run:
+          name: test         
+          command: |
+            npm run unit    
+            npm run features       
+     
+ 
+ 
+
+      
+
