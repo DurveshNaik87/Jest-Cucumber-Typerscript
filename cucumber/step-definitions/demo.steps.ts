@@ -1,5 +1,5 @@
 import { loadFeature, defineFeature } from "jest-cucumber";
-import * as ImpCountry from "../models/Country";
+import * as ImpCountry from "../../src/models/Country";
 import { anotherSharedStepWithParameter } from "./shared_steps";
 
 const feature = loadFeature("./cucumber/features/demo.feature");
