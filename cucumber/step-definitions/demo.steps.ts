@@ -108,31 +108,34 @@ defineFeature(feature, (test) => {
         thisIsASharedStep(given);
 
         anotherSharedStepWithParameter(when);
-    })
+
+    });
 
     test('Third scenario step definition table', ({ given, when, then }) => {
-        var countryArray : ImpCountry.country[] = new Array();
-        given('My country list currently looks as follows:', (table) => {
-            table.forEach((row:any)=>{
-                countryArray.push(new ImpCountry.country(row.countryNo,row.countryName,row.countrycapital));
-            })
+
+        var countryArray: ImpCountry.country[] = new Array();
+
+        given('My country list currently looks as follows:', (table: any[]) => {
+            table.forEach((row: any) => {
+                countryArray.push(new ImpCountry.country(row.countryNo, row.countryName, row.countrycapital));
+            });
         });
 
         when('I add a following country:', (table) => {
-            table.forEach((row:any)=>{
-                countryArray.push(new ImpCountry.country(row.countryNo,row.countryName,row.countrycapital));
-            })      
+            table.forEach((row: any) => {
+                countryArray.push(new ImpCountry.country(row.countryNo, row.countryName, row.countrycapital));
+            });
         });
 
         then('I should see the following country list:', (table) => {
             expect(countryArray.length).toBe(table.length);
 
-            table.forEach((row:any, index:any)=>{
+            table.forEach((row: any, index: any) => {
                 console.log(`${index} : ${JSON.stringify(row)}`);
                 expect(countryArray[index].countryNo).toEqual(row.countryNo);
                 expect(countryArray[index].countryName).toBe(row.countryName);
                 expect(countryArray[index].countrycapital).toBe(row.countrycapital);
-            })
+            });
         });
     });
 });
